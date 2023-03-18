@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+    --bg-clr: hsl(235, 21%, 11%);
+    --todo-bg-clr: hsl(235, 24%, 19%);
+    
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body {
+    margin: 0;
+    font-size: 18px;
+}
+header {
+    width: 100%;
+    min-height: 100vh;
+}
+header .bg {
+    width: 100%;
+    height: 35vh;
+    /* background-image: url(./images/bg-desktop-light.jpg); */
+}
+.bg img {
+    width: 100%;
+    height: 100%;
+}
+.solid {
+    width: 100%;
+    min-height: 65vh;
+    background-color: var(--bg-clr);
+}
+
+main {
+    color: #B9BBD2;
+    max-width: 530px;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+main .head  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .head h1{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+
+main .create {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--todo-bg-clr);
+}
+.circle {
+    margin-inline: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid hsl(234, 11%, 52%);
+}
+main .create input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 70%;
+    height: 40px;
+    font-size: 18px;
+    color: #B9BBD2;
+}
+main .create input::placeholder {
+    font-size: 18px;
+    color: hsl(234, 11%, 52%);
+}
+.checked .check .circle{
+    display: none;
+}
+.checked .check .complete {
+    display: flex;
+}
+.checked .check + p {
+    text-decoration: line-through;
+    color: #676980;
+}
+.complete {
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    margin-inline: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid hsl(234, 11%, 52%);
+    background-image: linear-gradient(120deg ,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+main #todos {
+    margin-top: 20px;
+}
+main #todos .todo {
+    display: flex;
+    align-items: center;
+    background-color: var(--todo-bg-clr);
+    /* padding: 10px 0; */
+    min-height: 50px;
+    border-bottom: 1px solid hsl(234, 11%, 52%);
+}
+main #todos .todo:first-child {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+main #todos .todo .check {
+    cursor: pointer;
+}
+main #todos .todo p {
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 20px;
+    background-color: var(--todo-bg-clr);
+    color: #676980;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.info #state {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+.info #state p {
+    max-width: 100%;
+    overflow: hidden;
+}
+.info #state p:hover {
+    color: hsl(220, 98%, 61%);
+    transition: all 0.5s;
+}
+.info #clear {
+    cursor: pointer;
+
+}
+.info .active {
+    color: hsl(220, 98%, 61%);
+}
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
